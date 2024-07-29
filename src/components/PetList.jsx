@@ -65,47 +65,4 @@ export default PetList;
 
 
 
-// import React from 'react';
-// import { useState } from 'react';
 
-// const PetList = ({ pets, error, currentPage, totalPages, handlePageChange }) => {
-//   const petsPerPage = 10;
-//   const startIndex = (currentPage - 1) * petsPerPage;
-//   const currentPets = pets.slice(startIndex, startIndex + petsPerPage);
-//   const [showDescription, setShowDescription] = useState(false);
-
-//     const handleButtonClick = () => {
-//         setShowDescription(true);
-//     };
-
-//   return (
-//     <div>
-//       {error && <div className="error">{error}</div>}
-//       <div id="pet-list">
-//         {currentPets.map(pet => (
-//           <div key={pet.id} className="p-3 rounded-lg max-w-48 text-left border-none bg-gray-900">
-//             {pet.images.length > 0 && <img src={pet.images[0]} alt={pet.name} className='w-full rounded-lg h-auto'/>}
-//             <h2 className='py-2 text-lg font-serif'>{pet.name}</h2>
-//             <p>{showDescription && <p>{pet.description}</p>}
-//             <button onClick={handleButtonClick}>Show Description</button></p>
-//           </div>
-//         ))}
-//       </div>
-//       <br/>
-//       <div className="pagination">
-//         {Array.from({ length: totalPages }, (_, index) => (
-//           <button 
-//             key={index + 1}
-//             onClick={() => handlePageChange(index + 1)}
-//             className={currentPage === index + 1 ? 'active' : ''}
-//           >
-//             {index + 1}
-//           </button>
-//         ))}
-//       </div>
-//       <br/>
-//     </div>
-//   );
-// };
-
-// export default PetList;
