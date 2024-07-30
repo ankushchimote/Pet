@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import bk from './assets/bk.jpg'
 import "./App.css";
 
+const BASE_URL = 'http://pets-v2.dev-apis.com/pets';
 function App() {
   const [pets, setPets] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -24,7 +25,7 @@ function App() {
   useEffect(() => {
     const fetchPets = async () => {
       try {
-        const response = await fetch("http://pets-v2.dev-apis.com/pets");
+        const response = await fetch(BASE_URL);
         const data = await response.json();
         setPets(data.pets);
         setFilteredPets(data.pets);
